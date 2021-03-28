@@ -16,9 +16,9 @@
 				<li><a href="login">로그인</a></li>
 			</c:when>		
 			<c:otherwise>
-				<h3>${session_nName} 님을 환영합니다!</h3>
-				<li><a href="list.do">게시판페이지</a></li>
-				<li><a href="logout.jsp">로그아웃</a></li>
+				<h3>${session_nickName} 님을 환영합니다!</h3>
+				<li><a href="list">게시판페이지</a></li>
+				<li><a href="logout">로그아웃</a></li>
 			</c:otherwise>
 		</c:choose>
 		</ul>

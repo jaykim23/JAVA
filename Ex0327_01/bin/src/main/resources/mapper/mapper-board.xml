@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.site.mapper.Board_Mapper">
+	<!-- 값을 받아서 오는건 타입을 꼭 정하고 받아야함 -->
+	<select id="selectloginService" parameterType="com.site.dto.MemberDto"
+		resultType="com.site.dto.MemberDto">
+		select * from loginboard where login_id=#{id} and login_pw=#{pw}
+	</select>
+	<!--쿼리 뒤에 세미콜롱 없다 절대로 이걸 마지막으로 구조는 다 만들었다 -->
+
+</mapper>

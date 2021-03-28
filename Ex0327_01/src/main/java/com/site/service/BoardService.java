@@ -1,9 +1,16 @@
 package com.site.service;
 
-import com.site.dto.dsa;
+import java.util.ArrayList;
+
+import com.site.dto.BoardDto;
+import com.site.dto.MemberDto;
 
 public interface BoardService {
 	
-	dsa loginService(dsa dto);
+	MemberDto loginService(MemberDto dto);
+
+	ArrayList<BoardDto> boardList();
+
+	BoardDto boardContentView(String bId);
 	
 }

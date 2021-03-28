@@ -10,7 +10,7 @@
 		<title>Insert title here</title>
 		<script type="text/javascript">
 			alert('로그아웃 되었습니다. 다음에 또 방문해주세요!');
-			location.href="index.jsp";
+			location.href="/";
 			
 		</script>
 	</head>

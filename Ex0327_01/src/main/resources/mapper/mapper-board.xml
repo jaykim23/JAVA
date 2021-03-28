@@ -7,8 +7,19 @@
 	<!-- 값을 받아서 오는건 타입을 꼭 정하고 받아야함 -->
 	<select id="selectloginService" parameterType="com.site.dto.MemberDto"
 		resultType="com.site.dto.MemberDto">
-		select * from loginboard where login_id=#{id} and login_pw=#{pw}
+		select * from cmember where id=#{id} and pw=#{pw}
 	</select>
 	<!--쿼리 뒤에 세미콜롱 없다 절대로 이걸 마지막으로 구조는 다 만들었다 -->
-
+	<select id="selectBoardList" resultType="com.site.dto.BoardDto">
+			select * from
+			<![CDATA[(select rownum rnum,a.*from
+			(select * from cboard order by bGroup desc, bStep asc)a)
+			where rnum>=1 and rnum<=10]]>
+			
+	</select>
+	<!-- content_view -->
+	<select id="selectBoardContentView" parameterType="String"
+		resultType="com.site.dto.BoardDto">
+		select * from cboard where bId=#{bId}
+	</select>
 </mapper>
